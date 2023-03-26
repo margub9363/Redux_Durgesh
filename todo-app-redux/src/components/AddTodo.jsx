@@ -9,7 +9,12 @@ const AddTodo = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // add todo in store
     console.log(todo);
+    setTodo({
+      title: "",
+      description: "",
+    });
   };
 
   return (
