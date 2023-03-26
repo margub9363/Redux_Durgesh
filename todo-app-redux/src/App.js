@@ -3,11 +3,7 @@ import "./App.css";
 import { Container } from "react-bootstrap";
 
 function App() {
-  return (
-    <Container>
-      <h1>This is testing</h1>
-    </Container>
-  );
+  return <Container></Container>;
 }
 
 export default App;
