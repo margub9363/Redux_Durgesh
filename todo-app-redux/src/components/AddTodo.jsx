@@ -7,6 +7,11 @@ const AddTodo = () => {
     description: "",
   });
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(todo);
+  };
+
   return (
     <Container>
       <Row>
@@ -15,7 +20,7 @@ const AddTodo = () => {
             <Card.Body>
               <h3>Add Todo here!</h3>
               {/* form */}
-              <Form>
+              <Form onSubmit={handleSubmit}>
                 {/* title */}
                 <Form.Group>
                   <Form.Label>Todo Title</Form.Label>
@@ -36,10 +41,16 @@ const AddTodo = () => {
                     as={"textarea"}
                     type="text"
                     placeholder="Enter here"
+                    value={todo.description}
+                    onChange={(event) =>
+                      setTodo({ ...todo, description: event.target.value })
+                    }
                   />
                 </Form.Group>
                 <Container className="text-center mt-3">
-                  <Button variant="primary">Add Todo</Button>
+                  <Button type="submit" variant="primary">
+                    Add Todo
+                  </Button>
                 </Container>
               </Form>
             </Card.Body>
