@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Row, Container, ListGroup } from "react-bootstrap";
+import DisplayCount from "./DisplayCount";
 
 const DisplayTodos = () => {
   const [todos, setTodos] = useState([
@@ -20,6 +21,7 @@ const DisplayTodos = () => {
           <Card className="mt-3 shadow-sm">
             <Card.Body>
               <h3>All Todos are here</h3>
+              <DisplayCount />
               <ListGroup>
                 {todos.map((todo, index) => (
                   <ListGroup.Item key={index}>
