@@ -7,7 +7,7 @@ export const addTodo = (todo) => ({
 });
 
 // delete Todo
-export const deleteTodo = (id) => ({
+export const deleteTodo = (todo, id) => ({
   type: DELETE_TODO,
   payload: todo,
 });
